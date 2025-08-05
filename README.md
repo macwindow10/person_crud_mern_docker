@@ -1,4 +1,4 @@
-# MERN Person CRUD App
+# MERN Person CRUD App - Dockerized Deployment
 
 A full-stack MERN (MongoDB, Express, React, Node.js) application to manage a list of persons. This project demonstrates basic CRUD (Create, Read, Update, Delete) operations with a `Person` model. This project is fully Dockerized for easy setup and deployment using Docker.
 
@@ -31,14 +31,3 @@ The database stores `Person` objects with the following fields:
 - Update person details
 - Delete a person
 - Upload and display picture for each person
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/mern-person-crud.git
-cd mern-person-crud
-```
