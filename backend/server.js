@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(cors());
 app.use('/uploads', express.static('uploads')); // Serve image files
 
+//  mongodb is name of docker container
 mongoose.connect('mongodb://admin:password@mongodb:27017/persondb?authSource=admin', {
     useNewUrlParser: true,
     useUnifiedTopology: true
