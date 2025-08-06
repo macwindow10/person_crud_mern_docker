@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  backend:
+    image: my-app-backend:1.0
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "5000:5000"
+    networks:
+      - mongo-network
+
+  frontend:
+    image: my-app-frontend:1.0
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - mongo-network
+    depends_on:
+      - backend
+
+networks:
+  mongo-network:
+    driver: bridge
