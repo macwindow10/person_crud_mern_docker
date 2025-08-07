@@ -12,6 +12,8 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=password
     networks:
       - mongo-network
+    volumes:
+      - mongo-data:/data/db
 
   backend:
     image: my-app-backend:1.0
@@ -47,3 +49,7 @@ services:
 networks:
   mongo-network:
     driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
